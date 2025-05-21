@@ -11,8 +11,8 @@ int main() {
 
     int sum = end - (11 + 11 * 60 + 11 * 24 * 60);
 
-    if(sum < 0) cout << -1;
-    else cout << sum;
+    if(sum >= 0) cout << sum;
+    else cout << -1;
 
     return 0;
 }
