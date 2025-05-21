@@ -31,8 +31,7 @@ int main() {
     }
     else {
         sum = first - end;
-        cout << sum % 7 << '\n';
-        cout << week[sum % 7];
+        cout << week[7 - sum % 7];
     }
 
     return 0;
