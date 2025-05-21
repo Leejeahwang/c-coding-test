@@ -9,6 +9,11 @@ int main() {
 
     int num_of_days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
+    if(m1 == m2){
+        cout << d2 - d1 + 1;
+        return 0;
+    }
+
     int a = 0;
     for(int i = 1; i <= m2; i++){
         a += num_of_days[i];
