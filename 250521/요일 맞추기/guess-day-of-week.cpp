@@ -9,7 +9,7 @@ int main() {
     cin >> m1 >> d1 >> m2 >> d2;
 
     int num_of_days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    string week[8] = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+    string week[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
     int end = 0;
     for(int i = 1; i < m2; i++){
@@ -23,9 +23,17 @@ int main() {
     }
     first += d1;
 
-    int sum = end - first + 1;
+    int sum = 0;
 
-    cout << week[sum % 7];
+    if(end >= first){
+        sum = end - first +1;
+        cout << week[sum % 7 - 1];
+    }
+    else {
+        sum = first - end;
+        cout << sum % 7 << '\n';
+        cout << week[sum % 7];
+    }
 
     return 0;
 }
