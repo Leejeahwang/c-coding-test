@@ -26,12 +26,12 @@ int main() {
     int sum = 0;
 
     if(end >= first){
-        sum = end - first +1;
-        cout << week[sum % 7 - 1];
+        sum = end - first + 1;
+        cout << week[(sum + 6) % 7];
     }
     else {
         sum = first - end;
-        cout << week[7 - sum % 7];
+        cout << week[(7 - sum % 7) % 7];
     }
 
     return 0;
