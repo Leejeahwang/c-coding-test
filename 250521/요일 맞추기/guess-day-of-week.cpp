@@ -23,9 +23,9 @@ int main() {
     }
     first += d1;
 
-    int sum = end - first;
+    int sum = end - first + 1;
 
-    cout << week[sum % 7 + 1];
+    cout << week[sum % 7];
 
     return 0;
 }
