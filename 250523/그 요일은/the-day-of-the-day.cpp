@@ -5,7 +5,7 @@ using namespace std;
 int m1, m2, d1, d2;
 string A;
 
-int num_of_days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 int sumday(int month, int day){
     int sum = 0;
@@ -22,10 +22,12 @@ int main() {
 
     string week[7] = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
-    int sum = sumday(m2, d2) - sumday(m1, m1);
+    int sum = sumday(m2, d2) - sumday(m1, d1);
+
     int cnt = sum / 7;
 
-    for(int i = 0; i < sum % 7; i++){
+
+    for(int i = 0; i <= sum % 7; i++){
         if(A == week[i]) cnt++;
     }
 
