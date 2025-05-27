@@ -15,7 +15,7 @@ int main() {
         int start = x + offset;
         int end = y + offset - 1;
 
-        for(int j = start; j < end; j++){
+        for(int j = start; j <= end; j++){
             arr[j]++;
         }
     }
